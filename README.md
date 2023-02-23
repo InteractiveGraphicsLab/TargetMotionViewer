@@ -12,6 +12,9 @@ https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item
 開発者 : 増田 毅,  井尻 敬
 
 
+![TargetMotionViewer](TargetMotionViewer.png)
+
+
 # 姿勢情報の抽出
 まず、MediaPipeを利用して対象の動画から人物のランドマーク情報を抽出します。  
 この工程には、pythonのインストールが必要です。
@@ -39,7 +42,7 @@ python video2pose_viewer_ui.py
 
 (必要に応じて)   
 動画内でマウスの左ドラッグをすることで注目領域 （ROI）を指定できます。
-ROIが指定されるとこの領域内のみで市政情報が抽出されます。  
+ROIが指定されるとこの領域内のみで姿勢情報が抽出されます。  
 画面が動画よりも小さい場合、画面サイズを大きくしてください。    
 
 
@@ -74,3 +77,7 @@ binフォルダ内の「TargetMotionViewer.exe」をダブルクリックする�
 
 (Optional) alingment idxを指定すると、その姿勢が表れたフレームをそろえるようにすべてのクリップを重ねた動画が作成されます。  
 例えば、投球時の脚の着地時間を合わせた合成動画の作成などに利用できます。
+
+(Optional) 左下のダイアログに、クリップ検出時の相違度グラフと閾値グラフ（黄色い直線）が表示されます。こちらを確認し、必要に応じて閾値を修正してください。  
+
+  
